@@ -1,0 +1,31 @@
+[package]
+name = "pulsar-bevy-integration"
+version = "0.1.0"
+edition = "2021"
+publish = false
+description = "Bevy 0.18 integration proof-of-concept for Pulsar Engine"
+
+[[bin]]
+name = "bevy_headless_demo"
+path = "src/main.rs"
+
+[[bin]]
+name = "bevy_bridge_demo"
+path = "src/bridge_demo.rs"
+
+[dependencies]
+bevy = { version = "0.18", default-features = false, features = [
+    "bevy_render",
+    "bevy_core_pipeline",
+    "bevy_pbr",
+    "bevy_asset",
+    "bevy_scene",
+    "bevy_winit",
+    "bevy_log",
+    "bevy_state",
+    "tonemapping_luts",
+    "zstd_rust",
+    "x11",
+] }
+image = { version = "0.25", default-features = false, features = ["png"] }
+pollster = "0.4"

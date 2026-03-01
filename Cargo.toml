@@ -5,6 +5,7 @@ members = [
 ]
 
 default-members = ["crates/engine"]
+exclude = ["examples/bevy-integration"]
 resolver = "2"
 
 ###################################
